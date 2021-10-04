@@ -6,3 +6,5 @@
         Veti primi: 'cmi'
         Veti printa: 3
 """
+x=input()
+print(len(x))

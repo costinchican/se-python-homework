@@ -11,3 +11,5 @@ d1 = {
 
 # Afisam tate cheile dictionarului d1, folosind metoda keys()
 print(d1.keys())
+print(d1.values())
+

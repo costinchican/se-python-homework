@@ -6,3 +6,8 @@
         Veti primi: 2 si 3
         Veti printa: 8
 """
+x=input()
+x=int(x)
+y=input()
+y=int(y)
+print(pow(x,y))

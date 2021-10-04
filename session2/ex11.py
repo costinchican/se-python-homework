@@ -12,3 +12,11 @@
         5
         cate un singur numar pe linie.
 """
+l=[];
+x=input()
+x=int(x)
+for i in range(x):
+   if i%2!=0 :
+     l.append(i)
+
+print(l)

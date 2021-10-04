@@ -21,3 +21,11 @@ d1 = {}
 
 # Afisam listele l1 si l2
 print(l1, l2)
+
+for i in l1:
+    for j in l2:
+     d1[i]=j;
+     l2.remove(j);
+     break
+
+print (d1)

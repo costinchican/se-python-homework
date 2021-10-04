@@ -8,3 +8,17 @@
         Veti primi 6, veti afisa [1, 2, 3, 4, 5]
         Veti primi 5, veti afisa [1, 4, 9, 16]
 """
+l=[];
+x=input();
+x=int(x);
+if x%2==0:
+    for i in range(x):
+        l.append(i)
+    l.remove(l[0]);
+    print(l)
+else:
+    for i in range(x):
+        l.append(pow(i,2))
+    l.remove(l[0]);
+    print(l)
+

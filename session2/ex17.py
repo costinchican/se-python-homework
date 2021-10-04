@@ -7,3 +7,12 @@
         Veti primi: 'cmi', 5
         Veti printa: 'cmicmicmicmicmi'
 """
+s=input();
+x=input();
+x=int(x);
+r=" "
+
+for i in range(x):
+    r=r+s;
+
+print(r)

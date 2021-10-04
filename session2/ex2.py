@@ -12,3 +12,10 @@ l2 = [5, 6, 7]
 # Pentru a vedea rezultatul, rulati acest script.
 print(l1)
 print(l2)
+
+l3=l1+l2; #METODA 1
+print(l3);
+
+l4=[*l1,*l2]; #METODA 2 - OPERATOR CONCATENARE
+print(l4);
+
