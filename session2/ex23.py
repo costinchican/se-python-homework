@@ -14,3 +14,12 @@
         Veti primi: 'cojoc'
         Veti printa: True
 """
+s=input()
+r=''.join(reversed(s))
+c=True
+if r==s:
+    c=True
+else:
+    c=False
+
+print(c)

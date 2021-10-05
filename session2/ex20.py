@@ -16,3 +16,11 @@
             2: 'i'
         }
 """
+s=input();
+x=input();
+x=int(x);
+d=dict();
+for i in range(x):
+    d[i]=s[i]  #d[key]=value
+
+print(d);

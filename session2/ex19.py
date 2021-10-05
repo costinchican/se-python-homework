@@ -6,3 +6,7 @@
         Veti primi: 'cmi'
         Veti printa: ('c', 'm', 'i')
 """
+
+x=input();
+x=tuple(x);
+print(x);

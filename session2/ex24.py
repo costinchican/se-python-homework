@@ -14,3 +14,12 @@
         Veti primi: 1232
         Veti printa: False
 """
+s=input()
+r=''.join(reversed(s))
+c=True
+if r==s:
+    c=True
+else:
+    c=False
+
+print(c)

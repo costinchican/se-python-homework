@@ -13,3 +13,15 @@
         False
         False
 """
+c=True
+
+while(1) :
+    s=input()
+    if s!='exit':
+        s=int(s)
+        if s%2==0 :
+            c=True
+        else:
+            c=False
+        print(c)
+    else: break
