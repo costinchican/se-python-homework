@@ -12,3 +12,7 @@
     Observatii:
         - functia trebuie sa aiba MAXIM 1 linie de cod ca si body
 """
+def add(prefix,word,sufix):
+    return prefix+word+sufix
+
+print(add('a','x','b'))

@@ -39,8 +39,35 @@ def generate_random_str(str_length):
     print(f"The generated string is {rand_str}")
     return rand_str
 
+def add_sufix(sfx, pre_string,x):
+    def verificare(sfx,pre_string,x):
+        c=0
+        for i in sfx:
+            for j in pre_string[0:(len(pre_string)-x)]:
+                if i==j:
+                    c=c+1
+        if c==0:
+            return True
+        else:
+            return False
+    if verificare(sfx,pre_string,x):
+        return pre_string+sfx
+    else:
+        a=2
+        while(a>0):
+              sfx2 = input('Give me an sufix\n')
+              if verificare(sfx2,pre_string,x):
+                  a=0
+                  return pre_string+sfx
+              else:
+                  a=a-1
+                  continue
+        if a==0:
+            return pre_string
 
-prefix = input('Give me an prefix\n')
+prefix=input('Give me an prefix\n')
 x = int(input('Give me a number to generate the random string\n'))
+sufix = input('Give me an sufix\n')
+print(add_sufix(sufix,add_prefix(prefix, generate_random_str(x)),x))
 
-print(add_prefix(prefix, generate_random_str(x)))
+

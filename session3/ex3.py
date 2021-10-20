@@ -12,4 +12,12 @@
 
 
 def func(x):
-    pass
+    x=int(x)
+    l=list()
+    x1=x
+    while x1>0 :
+        l.append(x-x1)
+        x1-=1
+    return l
+
+print(func(3))

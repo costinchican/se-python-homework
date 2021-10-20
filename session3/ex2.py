@@ -18,4 +18,4 @@ def func(param1, param2):
     return param1, param2
 
 
-print(func('cmi1', 'cmi2'))
+print(tuple(reversed(func('cmi1', 'cmi2'))))

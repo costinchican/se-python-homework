@@ -7,3 +7,7 @@
         - func('aabbcc')
             ---> 'bbccdd'
 """
+def f_increment(string):
+    return "".join([chr(ord(i)+1) for i in string])
+
+print(f_increment('aabbcc'))

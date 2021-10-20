@@ -6,8 +6,17 @@
 
     Functia decorata este f.
 """
+def logger(f):
+    def wrapper():
+        fisier=open("output11.data","w")
+        fisier.write(f())
+        fisier.close()
+        f()
+    return wrapper
 
 
-# decorate me
+@logger# decorate me
 def f():
     return "CMI"
+
+f()

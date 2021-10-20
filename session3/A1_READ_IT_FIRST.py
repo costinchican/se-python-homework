@@ -16,3 +16,6 @@
 
     Good luck and keep coding! (si scuze) :D
 """
+x=3
+pre_string='asxmarp'
+print(pre_string[0:(len(pre_string)-x)])

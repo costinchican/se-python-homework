@@ -8,7 +8,7 @@
 
 
 def f(*args):
-    print(*args)
+    print(args[1])
 
 
 # Nu modificati linia de mai jos

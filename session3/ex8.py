@@ -8,9 +8,9 @@
     f sa printeze si 'cmi' inainte.
 """
 
-
 def dec(func):
     def wrapper():
+        print('cmi')
         func()
 
     return wrapper
@@ -19,6 +19,5 @@ def dec(func):
 @dec
 def f():
     print('x')
-
 
 f()

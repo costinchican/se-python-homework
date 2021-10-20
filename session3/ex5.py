@@ -11,3 +11,16 @@
         si definitia functiei)
         - hint: list comprehensions (google it if you don't know it already)
 """
+
+def increment_list(l):
+      return list(map(lambda x:x+1,l)) #Utilizand functia lambda
+
+
+def increment_list1(l):
+    return [x+1 for x in l] #Utilizand list comprehension
+
+print(increment_list([0,1,2]))
+print(increment_list1([0,1,2]))
+
+
+
