@@ -1,5 +1,57 @@
+from ex1 import Animal, AnimalEnum
+from ex2 import Dog, Cat, Mouse
+
+
+import random
+
+class WorldEntity:
+    def __init__(self, entity_type: Animal, world):
+        self.entity_type = entity_type
+        self.world = world
+        a = random.randrange(1, world.map_height)
+        b = random.randrange(1, world.map_width)
+        self.current_position = (a, b)
+        self.entity_id = entity_type.animal_type.value
+
+    def move_up(self):
+        try:
+            self.current_position = (self.current_position[0] - 1, self.current_position[1])
+            self.world.world_map[self.current_position[0] + 1, self.current_position[1]] = 0
+            self.world.update_world(self)
+        except:
+            print("Map Limit Reached. Try a different move.")
+
+    def move_down(self):
+        try:
+            self.current_position = (self.current_position[0] + 1, self.current_position[1])
+            self.world.world_map[self.current_position[0] - 1, self.current_position[1]] = 0
+            self.world.update_world(self)
+        except:
+            print("Map Limit Reached. Try a different move.")
+
+    def move_left(self):
+        try:
+            self.current_position = (self.current_position[0], self.current_position[1] - 1)
+            self.world.world_map[self.current_position[0], self.current_position[1] + 1] = 0
+            self.world.update_world(self)
+        except:
+            print("Map Limit Reached. Try a different move.")
+
+    def move_right(self):
+        try:
+            self.current_position = (self.current_position[0], self.current_position[1] + 1)
+            self.world.world_map[self.current_position[0], self.current_position[1] - 1] = 0
+            self.world.update_world(self)
+        except:
+            print("Map Limit Reached. Try a different move.")
+
+
+
+
+
 """
     Create a class WorldEntity.
+
 
     public attributes:
         - entity_type: instance of Animal or classes that extend Animal

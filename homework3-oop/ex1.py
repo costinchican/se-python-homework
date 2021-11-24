@@ -28,3 +28,41 @@
     The explanations for what the methods should do are mainly for the classes
     that will extend the Animal class.
 """
+
+
+import abc
+from enum import Enum
+
+
+class AnimalEnum(Enum):
+    DOG = 1
+    CAT = 2
+    MOUSE = 3
+
+
+class Animal(abc.ABC):
+    def __init__(self, color: str, age: int, animal_type: AnimalEnum):
+        self.color = color
+        self.age = age
+        self.animal_type = animal_type
+
+    @abc.abstractmethod
+    def sound(self):
+        pass
+
+    @abc.abstractmethod
+    def tell_age(self):
+        pass
+
+    @abc.abstractmethod
+    def age_up(self):
+        pass
+
+    @classmethod
+    def all_implemented(cls):
+        if len(cls.__abstractmethods__):  # List of abstract methods
+            print(cls.__abstractmethods__)
+            return False
+        else:
+            return True
+
