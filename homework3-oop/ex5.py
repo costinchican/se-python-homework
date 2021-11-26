@@ -22,21 +22,29 @@ from ex1 import Animal, AnimalEnum
 from ex2 import Cat, Dog, Mouse
 from ex3 import World
 from ex4 import WorldEntity
+import random
 
-# WORK IN PROGRESS
 
-cat4 = Cat('brown', 4, AnimalEnum.DOG)
+colours = ['brown', 'white', 'black', 'gray']
+age = range(15)
+animale = [Cat(random.choice(colours), random.choice(age), AnimalEnum.CAT),
+           Dog(random.choice(colours), random.choice(age), AnimalEnum.DOG),
+           Mouse(random.choice(colours), random.choice(age), AnimalEnum.MOUSE)]
+
+entities = []
+
 w1 = World(10, 10)
-entitate = WorldEntity(cat4, w1)
 w1.init_world()
-#w1.see_world()
-w1.update_world(entitate)
-w1.see_world()
-print("MATRICE2")
-entitate.move_down()
-entitate.move_down()
-entitate.move_right()
-entitate.move_right()
-entitate.move_up()
-entitate.move_left()
+
+for i in range(10):
+    entity = WorldEntity(random.choice(animale), w1)
+    entities.append(entity)
+    w1.update_world(entity)
+
+for entity in entities:
+    moves = [entity.move_up, entity.move_down, entity.move_left, entity.move_right]
+    m = random.choice(moves)
+    for i in range(5):
+        m()
+
 w1.see_world()

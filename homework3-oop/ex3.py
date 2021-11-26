@@ -1,27 +1,3 @@
-import numpy as np
-
-
-from ex1 import Animal, AnimalEnum
-from ex2 import Cat, Dog, Mouse
-
-class World:
-    def __init__(self, map_height: int, map_width: int, world_map: np.array = None):
-        self.map_height = map_height
-        self.map_width = map_width
-        self.world_map = world_map
-
-    def init_world(self):
-        self.world_map = np.zeros((self.map_height, self.map_width))
-
-    def see_world(self):
-        print(self.world_map)
-
-    def update_world(self, world_entity) :
-        self.world_map[world_entity.current_position[0],world_entity.current_position[1]] = world_entity.entity_id
-
-
-
-
 """
 
     Create a class World.
@@ -47,3 +23,25 @@ class World:
             - this updates the world_map with the entity_id of the world_entity
             passed as a parameter
 """
+
+import numpy as np
+
+
+from ex1 import Animal, AnimalEnum
+from ex2 import Cat, Dog, Mouse
+
+
+class World:
+    def __init__(self, map_height: int, map_width: int, world_map: np.array = None):
+        self.map_height = map_height
+        self.map_width = map_width
+        self.world_map = world_map
+
+    def init_world(self):
+        self.world_map = np.zeros((self.map_height, self.map_width))
+
+    def see_world(self):
+        print(self.world_map)
+
+    def update_world(self, world_entity):
+        self.world_map[world_entity.current_position[0], world_entity.current_position[1]] = world_entity.entity_id

@@ -98,14 +98,15 @@ class Mouse(Animal):
         self.age += 1
 
 
-cat1 = Cat('white', 1)
-cat2 = Cat('brown', 4, AnimalEnum.DOG)
-cat3 = Cat('black', 10, AnimalEnum.MOUSE)
+if __name__ == "__main__":
+    cat1 = Cat('white', 1)
+    cat2 = Cat('brown', 4, AnimalEnum.DOG)
+    cat3 = Cat('black', 10, AnimalEnum.MOUSE)
 
-print(cat1.sound())
-print(cat2.sound())
-print(cat3.sound())
+    print(cat1.sound())
+    print(cat2.sound())
+    print(cat3.sound())
 
-print(cat1.tell_age())
-cat1.age_up()
-print(cat1.tell_age())
+    print(cat1.tell_age())
+    cat1.age_up()
+    print(cat1.tell_age())

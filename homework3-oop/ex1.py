@@ -65,4 +65,3 @@ class Animal(abc.ABC):
             return False
         else:
             return True
-
